@@ -1,0 +1,31 @@
+# Python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Envs & tooling
+.venv/
+.env
+.env.*
+*.env
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Outputs / data blobs
+runs/
+outputs/
+logs/
+checkpoints/
+*.pt
+*.ckpt
+data/
+artifacts/
+dist/
+build/
+
+# Blender cache
+*.blend1
+*.blend2
