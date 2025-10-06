@@ -1,66 +1,42 @@
-# Independent Research Skills Showcase
+# Independent Research Showcase
 
-## Overview
-This repository highlights practical machine learning and data analysis skills developed through independent research and experimentation. While my proprietary ROM‑R framework and company research remain confidential, all examples here use public datasets and open‑source tools.  You’ll find applied examples across classification, regression, clustering, chaotic simulations, optimization monitoring, and automation.
+Welcome to my personal research repository.  This project serves as a **sandbox** for developing and evaluating ideas at the intersection of machine learning, dynamical systems and cognitive science.  All examples here use **public datasets and standard algorithms**, ensuring no proprietary methods or data are exposed.
+
+## Motivation
+
+After completing my degree in Psychological Sciences at California State University San Marcos, I continued exploring how systems learn, adapt, and maintain identity over time.  This work sits at the boundary of applied machine learning and theoretical research I call **ROM‑R (Recursive Optimization with Memory and Reflection)**.  While the details of ROM‑R are proprietary, the public experiments in this repository illustrate the *types of questions* I investigate:
+
+- When do iterative algorithms converge to a stable point?  
+- How do residual errors evolve during training?  
+- Can simple feedback loops produce complex or chaotic behaviour?  
+
+These questions mirror issues in cognitive science—such as how minds stabilize self‑concepts—and inform the development of practical AI systems.
 
 ## Repository Structure
 
-### `ml_benchmarks/`
-Examples of supervised and unsupervised learning using **scikit‑learn** and **PyTorch**.  Each script logs results to CSV files and produces plots for easy interpretation.
+| Folder | Description |
+|-------|------------|
+| **`ml_benchmarks/`** | Supervised and unsupervised learning tasks on public datasets (digits classification, diabetes regression, iris clustering).  Each project includes a script, saved metrics (CSV/JSON), and plots. |
+| **`residual_monitors/`** | Demonstrations of optimization dynamics and convergence (e.g. gradient descent on synthetic data) with logged loss values and visualizations. |
+| **`simulations/`** | Explorations of simple dynamical systems (e.g. logistic map) to illustrate stability, bifurcation and chaos. |
+| **`automation/`**, **`visualization/`** | Placeholders for future scripts to automate sweeps and enhance plotting; currently minimal. |
+| **`docs/REFLECTIONS.md`** | In‑depth narrative explaining what each experiment shows and how it relates to the larger ROM‑R research questions without disclosing proprietary methods. |
 
-- **`digits_classification.py`** — Trains logistic regression on the sklearn digits dataset; logs train/test accuracy to `digits_results.csv` and saves `digits_accuracy.png`.
-- **`diabetes_regression.py`** — Runs a linear regression on the diabetes dataset; outputs predictions (`diabetes_regression_results.csv`), evaluation metrics (`diabetes_regression_metrics.csv`), and a scatter plot (`diabetes_regression_plot.png`).
-- **`iris_kmeans.py`** — Performs K‑Means clustering on the Iris dataset with PCA for visualization; reports silhouette and adjusted Rand index; saves cluster assignments (`iris_kmeans_results.csv`), metrics (`iris_kmeans_metrics.csv`), and a cluster plot (`iris_kmeans_clusters.png`).
-- **Digit benchmark files** (from earlier exercises) are also included: `digits_classification.py`, `digits_results.csv`, `digits_accuracy.png`.
+### Quick Start
 
-### `simulations/`
-Toy simulations illustrating recursive systems and chaotic dynamics.
+To run any of the benchmarks locally:
 
-- **`logistic_map.py`** — Generates a time series of the logistic map, saving values to `logistic_map.csv` and plotting the trajectory in `logistic_map.png`.  This demonstrates how simple nonlinear systems can exhibit complex behaviour.
+1. Create a new Python environment (e.g. via conda).  
+2. Install dependencies (`pip install -r requirements.txt` or install scikit‑learn, pandas, matplotlib).
+3. Navigate to the desired directory and execute the script with appropriate arguments (see docstrings in each script).  
+4. Inspect the generated CSV/JSON logs and plots in the same folder.
 
-### `residual_monitors/`
-Small utilities for monitoring optimization and detecting instability during training.
+Because each experiment uses public data, you can freely modify the scripts, reproduce the results, and extend the analyses.
 
-- **`gradient_descent_demo.py`** — Implements a basic gradient descent loop for linear regression; logs loss at each iteration (`gradient_descent_losses.csv`) and plots the loss curve (`gradient_descent_loss.png`).  Shows how to instrument an optimization process.
-- **`monitor.py`** — Generic hooks for checking gradient norms or other simple training diagnostics.
+## Reflections and ROM‑R Context
 
-### `automation/` and `visualization/`
-Placeholders for experiment orchestration scripts and custom visualization utilities.  These can be expanded to automate sweeps or create standardized plots for reports.
+For high‑level commentary on what these experiments demonstrate and how they connect to my ROM‑R research, see [`docs/REFLECTIONS.md`](docs/REFLECTIONS.md).  This document explains the purpose, observations and takeaways of each benchmark and outlines how concepts like *fixed points*, *residual dynamics* and *self‑consistency* inform my ongoing theoretical work.
 
-## Getting Started
+## Contact
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Ge2yr/independent-research-showcase.git
-   cd independent-research-showcase
-   ```
-2. **Create and activate a Python environment** (example using conda):
-   ```bash
-   conda create -n irs python=3.11 -y
-   conda activate irs
-   pip install -r requirements.txt
-   ```
-3. **Run an example**:
-   ```bash
-   # Digit classification
-   python ml_benchmarks/digits_classification.py
-
-   # Diabetes regression
-   python ml_benchmarks/diabetes_regression.py
-
-   # Iris clustering
-   python ml_benchmarks/iris_kmeans.py
-
-   # Logistic map simulation
-   python simulations/logistic_map.py
-   ```
-   Outputs will appear in the corresponding folders as `.csv` logs and `.png` plots.  Inspect the CSVs for numeric results and open the images for visual summaries.
-
-## Contributing & Notes
-
-- All code and data here are non‑proprietary.  Proprietary algorithms and ROM‑R research remain under NDA and are not shared.
-- Feel free to fork or clone this repository for learning purposes.  If you suggest improvements or have ideas for additional public experiments, open an issue or submit a pull request.
-
----
-
-*This repository serves as a public portfolio of applied ML and research skills while keeping confidential work protected.*
+I am currently seeking opportunities to collaborate on applied research projects that blend **machine learning, neuroscience, and systems theory**.  If you are a researcher or a team interested in these areas, feel free to reach out.  Note that I cannot share proprietary algorithms or detailed ROM‑R implementations, but I am always happy to discuss the high‑level ideas and the science behind them.
